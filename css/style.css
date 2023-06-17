@@ -1,0 +1,842 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body{
+    background-color: #f5f5f5;
+}
+.row{
+    margin-left: 0;
+    margin-right: 0;
+}
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl{
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-right: auto;
+    margin-left: auto;
+}
+nav{
+    background-color: rgba(0, 0, 0, 0.9);
+}
+nav .container .navbar-brand{
+    font-size: 28px;
+    color: #fff;
+    font-weight: 600;
+}
+nav .container ul li a{
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    position: relative;
+    padding-left: 0;
+}
+nav .container ul li a:hover, .nav-link:focus, .nav-link:hover{
+    color: #fff;
+}
+
+nav .container ul li a::before{
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    transition: width 0.5s ease-in;
+    background-color: rgba(0, 0, 0, 0);
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show{
+    color: #fff;
+    background-color: transparent;
+}
+nav .container ul li a:hover::before, .navbar-nav .nav-link.active::before{
+    background-color: #fff;
+}
+nav .container ul li a[href="#HOME"]:hover::before, .navbar-nav .nav-link.active[href="#HOME"]::before {
+    width: 35px;
+}
+nav .container ul li a[href="#ABOUT"]:hover::before, .navbar-nav .nav-link.active[href="#ABOUT"]::before {
+    width: 40px;
+}
+nav .container ul li a[href="#SERVICES"]:hover::before, .navbar-nav .nav-link.active[href="#SERVICES"]::before, nav .container ul li a[href="#CONTACT"]:hover::before, .navbar-nav .nav-link.active[href="#CONTACT"]::before {
+    width: 55px;
+}
+nav .container ul li a[href="#PORTFOLIO"]:hover::before, .navbar-nav .nav-link.active[href="#PORTFOLIO"]::before {
+    width: 65px;
+}
+nav .container ul li a[href="#BLOG"]:hover::before, .navbar-nav .nav-link.active[href="#BLOG"]::before {
+    width: 30px;
+}
+nav .container .Frist-Drop .nav-link:hover:before{
+    width: 80px;
+    background-color: #fff;
+    bottom: 0;
+}
+nav .container ul{
+    padding-left: 1rem;
+}
+nav .container svg{
+    color: #fff;
+}
+nav .container .dropdown-item{
+    font-size: 14px;
+    color: #4e4e4e;
+}
+nav .container .dropdown-item:hover{
+    color: #0078ff;
+}
+body:has(nav .container .First-Ul:hover) nav .container .Frist-Drop .nav-link::before{
+    width: 80px;
+    background-color: #fff;
+    bottom: 0;
+}
+.section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+/* Section Home Start */
+.section:first-child{
+    background-image: url(../img/hero-bg.jpg);
+    background-position: center center;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.section:first-child .Dark-Layer{
+    background-color: rgba(0, 0, 0, 0.6);
+    background-position: center center;
+    background-size: 100% 100%;
+}
+.section:first-child .Dark-Layer div h1{
+    font-size: 72px;
+    font-weight: 600;
+    color: #fff;
+}
+.section:first-child .Dark-Layer div p{
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+}
+.section:first-child .Dark-Layer div p::after{
+    content: "";
+    color: #fff;
+    animation-name: Home;
+    animation-duration: 13s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes Home{
+    0%{content: "|";}
+    0.735%{content: "D|";}
+    1.47%{content: "De|";}
+    2.205%{content: "Des|";}
+    2.94%{content: "Desi|";}
+    3.675%{content: "Desig|";}
+    4.41%{content: "Design|";}
+    5.145%{content: "Designe|";}
+    5.88%{content: "Designer|";}
+    6.615%{content: "Designer|";}
+    7.37%{content: "Designer|";}
+    8.085%{content: "Designer";}
+    8.82%{content: "Designer";}
+    9.555%{content: "Designer";}
+    10.29%{content: "Designer|";}
+    11.025%{content: "Designer|";}
+    11.76%{content: "Designer|";}
+    12.495%{content: "Designer";}
+    13.23%{content: "Designer";}
+    13.965%{content: "Designer";}
+    14.7%{content: "Designer|";}
+    15.435%{content: "Designer|";}
+    16.17%{content: "Designer|";}
+    16.905%{content: "Designer";}
+    17.64%{content: "Designer";}
+    18.375%{content: "Designer";}
+    19.11%{content: "Designer|";}
+    19.845%{content: "Designe|";}
+    20.58%{content: "Design|";}
+    21.315%{content: "Desig|";}
+    22.05%{content: "Desi|";}
+    22.785%{content: "Des|";}
+    23.52%{content: "De|";}
+    24.255%{content: "D|";}
+    25%{content: "|";}
+    25.6%{content: "D|";}
+    26.2%{content: "De|";}
+    26.8%{content: "Dev|";}
+    27.4%{content: "Deve|";}
+    28%{content: "Devel|";}
+    28.6%{content: "Develo|";}
+    29.2%{content: "Develop|";}
+    29.8%{content: "Develope|";}
+    30.4%{content: "Developer|";}
+    31%{content: "Developer|";}
+    31.6%{content: "Developer|";}
+    32.2%{content: "Developer|";}
+    32.8%{content: "Developer";}
+    33.4%{content: "Developer";}
+    34%{content: "Developer";}
+    34.6%{content: "Developer";}
+    35.2%{content: "Developer|";}
+    35.8%{content: "Developer|";}
+    36.4%{content: "Developer|";}
+    37%{content: "Developer|";}
+    37.6%{content: "Developer";}
+    38.2%{content: "Developer";}
+    38.8%{content: "Developer";}
+    39.4%{content: "Developer";}
+    40%{content: "Developer|";}
+    40.6%{content: "Developer|";}
+    41.2%{content: "Developer|";}
+    41.8%{content: "Developer|";}
+    42.4%{content: "Developer";}
+    43%{content: "Developer";}
+    43.6%{content: "Developer";}
+    44.2%{content: "Developer";}
+    44.8%{content: "Developer|";}
+    45.4%{content: "Develope|";}
+    46%{content: "Develop|";}
+    46.6%{content: "Develo|";}
+    47.2%{content: "Devel|";}
+    47.8%{content: "Deve|";}
+    48.4%{content: "Dev|";}
+    49%{content: "De|";}
+    49.5%{content: "D|";}
+    50%{content: "|";}
+    50.5%{content: "F|";}
+    51%{content: "Fr|";}
+    51.5%{content: "Fre|";}
+    52%{content: "Free|";}
+    52.5%{content: "Freel|";}
+    53%{content: "Freela|";}
+    53.5%{content: "Freelan|";}
+    54%{content: "Freelanc|";}
+    54.5%{content: "Freelance|";}
+    55%{content: "Freelancer|";}
+    55.5%{content: "Freelancer|";}
+    56%{content: "Freelancer|";}
+    56.5%{content: "Freelancer|";}
+    57%{content: "Freelancer|";}
+    57.5%{content: "Freelancer";}
+    58%{content: "Freelancer";}
+    58.5%{content: "Freelancer";}
+    59%{content: "Freelancer";}
+    59.5%{content: "Freelancer";}
+    60%{content: "Freelancer|";}
+    60.5%{content: "Freelancer|";}
+    61%{content: "Freelancer|";}
+    61.5%{content: "Freelancer|";}
+    62%{content: "Freelancer|";}
+    62.5%{content: "Freelancer";}
+    63%{content: "Freelancer";}
+    63.5%{content: "Freelancer";}
+    64%{content: "Freelancer";}
+    64.5%{content: "Freelancer";}
+    65%{content: "Freelancer|";}
+    65.5%{content: "Freelancer|";}
+    66%{content: "Freelancer|";}
+    66.5%{content: "Freelancer|";}
+    67%{content: "Freelancer|";}
+    67.5%{content: "Freelancer";}
+    68%{content: "Freelancer";}
+    68.5%{content: "Freelancer";}
+    69%{content: "Freelancer";}
+    69.5%{content: "Freelancer";}
+    70%{content: "Freelancer|";}
+    70.5%{content: "Freelance|";}
+    71%{content: "Freelanc|";}
+    71.5%{content: "Freelan|";}
+    72%{content: "Freela|";}
+    72.5%{content: "Freel|";}
+    73%{content: "Free|";}
+    73.5%{content: "Fre|";}
+    74%{content: "Fr|";}
+    74.5%{content: "F|";}
+    75%{content: "|";}
+    75.42%{content: "P|";}
+    75.84%{content: "Ph|";}
+    76.26%{content: "Pho|";}
+    76.68%{content: "Phot|";}
+    77.1%{content: "Photo|";}
+    77.52%{content: "Photog|";}
+    77.94%{content: "Photogr|";}
+    78.36%{content: "Photogra|";}
+    78.78%{content: "Photograp|";}
+    79.2%{content: "Photograph|";}
+    79.62%{content: "Photographe|";}
+    80.04%{content: "Photographer|";}
+    80.46%{content: "Photographer|";}
+    80.88%{content: "Photographer|";}
+    81.3%{content: "Photographer|";}
+    81.72%{content: "Photographer|";}
+    82.14%{content: "Photographer|";}
+    82.56%{content: "Photographer";}
+    82.98%{content: "Photographer";}
+    83.4%{content: "Photographer";}
+    83.82%{content: "Photographer";}
+    84.24%{content: "Photographer";}
+    84.66%{content: "Photographer";}
+    85.08%{content: "Photographer|";}
+    85.5%{content: "Photographer|";}
+    85.92%{content: "Photographer|";}
+    86.34%{content: "Photographer|";}
+    86.76%{content: "Photographer|";}
+    87.18%{content: "Photographer|";}
+    87.6%{content: "Photographer";}
+    88.02%{content: "Photographer";}
+    88.44%{content: "Photographer";}
+    88.86%{content: "Photographer";}
+    89.28%{content: "Photographer";}
+    89.7%{content: "Photographer";}
+    90.12%{content: "Photographer|";}
+    90.54%{content: "Photographer|";}
+    90.96%{content: "Photographer|";}
+    91.38%{content: "Photographer|";}
+    91.8%{content: "Photographer|";}
+    92.22%{content: "Photographer|";}
+    92.64%{content: "Photographer";}
+    93.06%{content: "Photographer";}
+    93.48%{content: "Photographer";}
+    93.9%{content: "Photographer";}
+    94.32%{content: "Photographer";}
+    94.74%{content: "Photographer";}
+    95.16%{content: "Photographer|";}
+    95.58%{content: "Photographe|";}
+    96%{content: "Photograph|";}
+    96.42%{content: "Photograp|";}
+    96.84%{content: "Photogra|";}
+    97.26%{content: "Photogr|";}
+    97.68%{content: "Photog|";}
+    98.1%{content: "Photo|";}
+    98.52%{content: "Phot|";}
+    98.94%{content: "Pho|";}
+    99.36%{content: "Ph|";}
+    99.78%{content: "P|";}
+    100%{content: "|";}
+}
+.section:first-child .Clear{
+    position: absolute;
+    background-color: #000;
+    width: 40px;
+    height: 50px;
+    transition: 500ms;
+    right: 10px;
+    bottom: 0;
+    z-index: 50;
+}
+/* Section Home End */
+/* Section About Start */
+.section:nth-child(2){
+    height: auto;
+    color: #4e4e4e;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 5% 0;
+}
+.section:nth-child(2) .word{
+    font-size: 14px;
+}
+.section:nth-child(2) .container span{
+    color: #1E1E1E;
+    font-size: 17.6px;
+    font-weight: 600;
+}
+.section:nth-child(2) .container div .progress{
+    background-color: #CDE1F8;
+    /* margin: 0.5rem 0 1rem 0; */
+    border-radius: 0;
+}
+.section:nth-child(2) .container h5{
+    font-size: 32px;
+    font-weight: 500;
+    color: #1E1E1E;
+    position: relative;
+}
+.section:nth-child(2) .container h5::before{
+    content: "";
+    position: absolute;
+    background-color: #0078ff;
+    width: 100px;
+    height: 3px;
+    top: 100%;
+}
+.section:nth-child(2) .container .words p{
+    font-size: 16px;
+    font-weight: 300;
+    color: #4E4E4E;
+}
+/* Section About End */
+/* Section Services Start */
+
+.section:nth-child(3){
+    height: auto;
+    padding: 3% 0 0 0 ;
+}
+.section:nth-child(3) h3{
+    font-size: 48px;
+    font-weight: 700;
+    color: #1E1E1E;
+}
+.section:nth-child(3) p{
+    color: #4E4E4E;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+}
+.section:nth-child(3) .SERVICES-P{
+    width: 40px;
+    height: 5px;
+    background-color: #0078ff;
+    margin: 0 auto;
+}
+.section:nth-child(3) .card .Icon{
+    border: 9px #0078ff solid;
+    border-radius: 50%;
+    height: 110px;
+    width: 110px;
+}
+.section:nth-child(3) .card .Icon .Icon-1{
+    background-color: #fff;
+}
+.section:nth-child(3) .card:hover .Icon{
+    transition: 500ms ease-in;
+    border: 9px #cde1f8 solid;
+}
+.section:nth-child(3) .card:hover .Icon .Icon-1{
+    background-color: #0078ff;
+    transition: 500ms ease-in;
+}
+.section:nth-child(3) .card .Icon .Icon-1 svg{
+    font-size: 40px;
+}
+.section:nth-child(3) .card:hover .Icon .Icon-1 svg{
+    color: #fff;
+    transition: 500ms ease-in;
+}
+/* Section Services End */
+/* First Empty Section Start */
+.section:nth-child(4){
+    height: auto;
+    background-image: url(../img/counters-bg.jpg);
+    background-position: center center;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-weight: 400;
+}
+.section:nth-child(4) .Layer-Empty{
+    background-color:rgba(0, 120, 255,0.7 ) ; 
+}
+.section:nth-child(4) .Icon{
+    border: 9px #cde1f8 solid;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+}
+.section:nth-child(4) .Icon .Icon-1{
+    background-color: transparent;
+}
+.section:nth-child(4) .Icon .Icon-1 svg{
+    font-size: 32px;
+    color: #fff;
+}
+.section:nth-child(4) p{
+    font-size: 32px;
+    color: #fff;
+}
+.section:nth-child(4) span{
+    font-size: 16px;
+    color: #fff;
+}
+/* First Empty Section End */
+/* Section Portfolio Start */
+.section:nth-child(5){
+    height: auto;
+    padding: 3% 0 0 0 ;
+}
+.section:nth-child(5) h3{
+    font-size: 48px;
+    font-weight: 700;
+    color: #1E1E1E;
+}
+.section:nth-child(5) p{
+    color: #4E4E4E;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+}
+.section:nth-child(5) .PORTFOLIO-P{
+    width: 40px;
+    height: 5px;
+    background-color: #0078ff;
+    margin: 0 auto;
+}
+.section:nth-child(5) .card .Image-Hover{
+    overflow: hidden;
+}
+.section:nth-child(5) .card .Image-Hover img{
+    transition: transform 0.8s ease-in;
+}
+.section:nth-child(5) .card img:hover{
+    transform: scale(1.3);
+}
+.section:nth-child(5) .card h2{
+    font-size: 18.2px;
+    font-weight: 500;
+    color: #1E1E1E;
+    text-align: left;
+}
+.section:nth-child(5) .card p{
+    font-size: 11.8px;
+    font-weight: 400;
+    color: #4E4E4E;
+    text-align: left;
+}
+.section:nth-child(5) .card span{
+    color: #0078ff;
+}
+.section:nth-child(5) .card .Icon{
+    border: 2px #0078ff solid;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+.section:nth-child(5) .card .Icon .Icon-1{
+    background-color: #fff;
+}
+.section:nth-child(5) .Icon .Icon-1 svg{
+    font-size: 24px;
+    color: #0078ff;
+}
+/* Section Portfolio End */
+/* Second Empty Section Start */
+.section:nth-child(6){
+    height: 91vh;
+    background-image: url(../img/overlay-bg.jpg);
+    background-position: center center;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.section:nth-child(6) .Layer-Empty{
+    background-color:rgba(0, 120, 255,0.7 ) ; 
+}
+.carousel-indicators [data-bs-target]{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+.section:nth-child(6) .Empty-carousels{
+    padding: 5% 0;
+}
+.section:nth-child(6) .Empty-carousels p{
+    font-size: 20px;
+    font-weight: 300;
+    color: #fff;
+}
+.section:nth-child(6) .Empty-carousels span{
+    font-size: 22.4px;
+    font-weight: 600;
+    color: #fff;
+}
+/* Second Empty Section End */
+/* Section Blog Start */
+.section:nth-child(7){
+    height: auto;
+    padding: 3% 0 0 0 ;
+}
+.section:nth-child(7) h3{
+    font-size: 48px;
+    font-weight: 700;
+    color: #1E1E1E;
+}
+.section:nth-child(7) p{
+    color: #4E4E4E;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+}
+.section:nth-child(7) .BLOG-P{
+    width: 40px;
+    height: 5px;
+    background-color: #0078ff;
+    margin: 0 auto;
+}
+.section:nth-child(7) .card{
+    border: 1px rgba(0, 0, 0, 0.175) solid;
+    border-radius: 0;
+}
+.section:nth-child(7) .card img{
+    border-radius: 0;
+}
+.section:nth-child(7) .card .card-body .Title-Card{
+    border: 1px #0078ff solid;
+    background-color: #0078ff;
+    transform: translate(0px, -100%);
+    width: 100px;
+}
+.section:nth-child(7) .card .card-body .Title-Card h6{
+    font-size: 13.2px;
+    font-weight: 500;
+    color: #fff;
+    margin: 0;
+}
+.section:nth-child(7) .card .card-body .card-title{
+    font-size: 20.8px;
+    font-weight: 500;
+    color: #1E1E1E;
+    text-align: left;
+    transition: 500ms ease-in;
+}
+.section:nth-child(7) .card .card-body .card-title:hover, .section:nth-child(7) .card .card-footer .This-Span:hover{
+    color: #0078ff;
+}
+.section:nth-child(7) .card .card-body .card-text, .section:nth-child(7) .card .card-footer span{
+    font-size: 16px;
+    font-weight: 400;
+    color: #4E4E4E;
+    text-align: left;
+}
+.section:nth-child(7) .card .card-footer img{
+    width: 32px;
+    height: 32px;
+}
+.section:nth-child(7) .card .card-footer .This-Span{
+    color: #1E1E1E;
+}
+.section:nth-child(7) .card .card-footer svg{
+    color: #4E4E4E;
+}
+/* Section Blog End */
+/* Section Contact Start */
+.section:nth-child(8){
+    height: auto;
+    background-image: url(../img/overlay-bg.jpg);
+    background-position: center center;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #4e4e4e;
+    font-size: 16px;
+    font-weight: 400;
+}
+.section:nth-child(8) .Layer-Empty{
+    background-color:rgba(0, 120, 255,0.7 ) ;
+}
+.section:nth-child(8) .container h5{
+    font-size: 32px;
+    font-weight: 500;
+    color: #1E1E1E;
+    position: relative;
+}
+.section:nth-child(8) .container h5::before{
+    content: "";
+    position: absolute;
+    background-color: #0078ff;
+    width: 100px;
+    height: 3px;
+    top: 100%;
+}
+.section:nth-child(8) .container form input, .section:nth-child(8) .container form textarea{
+    font-size: 14px;
+    font-weight: 400;
+    color: #212529;
+}
+.section:nth-child(8) .container form textarea{
+    height: 100px;
+}
+.section:nth-child(8) .container form button{
+    width: 35%;
+    padding: 10px;
+    color: #fff;
+    background-color: #0062d3;
+    border: 1px #0062d3 solid;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 100vh;
+    margin: 2rem auto 0 auto;
+    transition: 500ms ease-in;
+}
+.section:nth-child(8) .container form button:hover{
+    background-color: #3393FF;
+    box-shadow: 0 0 0 5px #cde1f8;
+}
+.section:nth-child(8) .container p{
+    margin-top: 2rem;
+    font-size: 16px;
+    font-weight: 300;
+    color: #4E4E4E;
+}
+.section:nth-child(8) .container .words svg{
+    color: #0078ff;
+    margin-right: 8px;
+}
+.section:nth-child(8) .container .words span{
+    font-size: 16px;
+    font-weight: 400;
+    color: #4E4E4E;
+}
+.section:nth-child(8) .container .Icon{
+    border: 4px #0078ff solid;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    background-color: #fff;
+}
+.section:nth-child(8) .container .Icon:hover{
+    transition: 500ms ease-in;
+    border: 4px #cde1f8 solid;
+    background-color: #0078ff;
+}
+.section:nth-child(8) .container .Icon svg{
+    color: #1E1E1E;
+    font-size: 19.2px;
+    margin: 0;
+}
+.section:nth-child(8) .container .Icon:hover svg{
+    color: #fff;
+    transition: 500ms ease-in;
+}
+/* Section Contact End */
+/* Footer Start */
+footer{
+    height: auto;
+    background-color: #0062d3;
+    box-shadow: inset 0 0px 20px 10px rgba(0, 0, 0, 0.1);
+}
+footer .container p{
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 0.4rem;
+}
+footer .container p a{
+    color: #fff;
+    text-decoration: none;
+}
+/* Footer End */
+/* Blue-Button Start */
+.Blue-Button{
+    position: fixed;
+    background-color: #0078ff;
+    width: 40px;
+    height: 40px;
+    transition: 500ms;
+    right: 10px;
+    bottom: 10px;
+    z-index: 40;
+}
+.Blue-Button svg{
+    color: #fff;
+}
+.Blue-Button:hover{
+    background-color: #298eff;
+}
+/* Blue-Button End*/
+/* Media One */
+@media (max-width: 991.98px){
+    /* Section Blog Updated Start */
+    .section:nth-child(7) .card .card-body .card-title{
+        font-size: 14.8px;
+        font-weight: 500;
+        color: #1E1E1E;
+        text-align: left;
+        transition: 500ms ease-in;
+    }
+    .section:nth-child(7) .card .card-body .card-text, .section:nth-child(7) .card .card-footer span{
+        font-size: 12px;
+        font-weight: 400;
+        color: #4E4E4E;
+        text-align: left;
+    }
+    /* Section Blog Updated End */
+}
+/* Media Two */
+@media (max-width: 767.98px){
+    /* Section Blog Updated Start */
+    .section:nth-child(7) .card .card-body .card-title{
+        font-size: 10px;
+        font-weight: 500;
+        color: #1E1E1E;
+        text-align: left;
+        transition: 500ms ease-in;
+    }
+    .section:nth-child(7) .card .card-body .card-text, .section:nth-child(7) .card .card-footer span{
+        font-size: 7px;
+        font-weight: 400;
+        color: #4E4E4E;
+        text-align: left;
+    }
+    .section:nth-child(7) .card .card-footer .This-Span{
+        color: #1E1E1E;
+        font-size: 7px;
+    }
+    .section:nth-child(7) .card .card-footer svg{
+        color: #4E4E4E;
+        font-size: 12px;
+    }
+    .section:nth-child(7) .card .card-body .Title-Card{
+        border: 1px #0078ff solid;
+        background-color: #0078ff;
+        transform: translate(13%, -100%);
+        width: 100px;
+        position: absolute;
+    }
+    .section:nth-child(7) .card .card-footer img {
+        width: 25px;
+        height: 25px;
+    }
+}
+/* Last Media */
+@media (max-width: 575.98px){
+    .section:nth-child(7) .card{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .section:nth-child(7) .card .card-body .card-title{
+        font-size: 20.8px;
+        font-weight: 500;
+        color: #1E1E1E;
+        text-align: left;
+        transition: 500ms ease-in;
+    }
+    .section:nth-child(7) .card .card-body .card-text, .section:nth-child(7) .card .card-footer span{
+        font-size: 16px;
+        font-weight: 400;
+        color: #4E4E4E;
+        text-align: left;
+    }
+    .section:nth-child(7) .card .card-footer img{
+        width: 32px;
+        height: 32px;
+    }
+    .section:nth-child(7) .card .card-footer .This-Span{
+        color: #1E1E1E;
+        font-size: 16px;
+    }
+    .section:nth-child(7) .card .card-footer svg{
+        color: #4E4E4E;
+        font-size: 16px;
+    }
+    .section:nth-child(7) .card .card-body .Title-Card{
+        border: 1px #0078ff solid;
+        background-color: #0078ff;
+        transform: translate(0px, -100%);
+        width: 100px;
+        position: relative;
+    }
+    .section:nth-child(8) .words{
+        margin-top: 1.5rem;
+    }
+    .section:nth-child(2) .word{
+        margin-top: 1rem;
+    }
+    
+}
